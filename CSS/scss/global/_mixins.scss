@@ -1,5 +1,12 @@
 @use "variabels" as *;
 
+
+@mixin maxSmallMobile {
+  @media (max-width: 330px) {
+    @content;
+  }
+}
+
 @mixin maxMobile {
   @media (max-width: $max-mobile) {
     @content;
@@ -14,6 +21,12 @@
 
 @mixin maxMedium {
   @media (max-width: $max-medium) {
+    @content;
+  }
+}
+
+@mixin minLarge {
+  @media (min-width: $min-large) {
     @content;
   }
 }

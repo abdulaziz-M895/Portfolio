@@ -1,19 +1,46 @@
 @use "variabels" as *;
+@use "mixins" as m;
 html {
   font-size: 100%;
 }
 body {
   font-family: $poppins;
+  background-color: var(--color-background-body);
+  color: var(--color-main-text);
+  line-height: 1.2;
+}
+::selection {
+  color: var(--color-background-body);
+  background: var(--color-background-active);
 }
 a {
   text-decoration: none;
+  color: inherit;
+  display: inline-block;
 }
 ul {
   list-style: none;
 }
 a:active,
 a:focus,
-a:visited {
+a:visited,
+button,
+.button {
   border: none;
   outline: none;
+  cursor: pointer;
+}
+
+.opacity-1 {
+  opacity: 1 !important;
+}
+
+.container {
+  @media (min-width: 2329px) {
+    max-width: 1815px;
+  }
+}
+
+section {
+  padding-block: 60px;
 }

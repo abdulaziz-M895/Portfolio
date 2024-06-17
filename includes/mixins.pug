@@ -1,0 +1,13 @@
+mixin backgroundImage($class)
+  div(class=`background-image ${$class}`)
+    .overlay-1
+    .overlay-2
+
+mixin sectionHeading($sign, $title, $paragraph)
+  .setion-heading 
+    h5.setion-heading__sign #{$sign}
+    h2.setion-heading__title #{$title}
+    p.setion-heading__paragraph #{$paragraph}
+
+mixin mainButton($text, $url)
+  a.main-button(href=`${$url}`) #{$text}

@@ -1,5 +1,45 @@
 $max-mobile: 767px;
 $min-medium: 992px;
 $max-medium: 991px;
+$min-large: 1440px;
 
 $poppins: "Poppins", sans-serif;
+$VT323: "VT323", monospace;
+
+:root {
+  --color-main-text: #e6db74;
+  --color-secondary-text: #9a99ff;
+  --color-background-active: #2fcbef;
+  --color-background-body: #212121;
+  --color-background-body-2: #292929;
+  --color-white: #fff;
+  --color-border: #ffffff1f;
+
+  --transition-time-3: 0.3s;
+  --transition-time-5: 0.5s;
+
+  --font-size-h1: 8vw;
+  --font-size-h2: 7vw;
+  --font-size-h3: 3.1vw;
+  --font-size-h4: 2.6vw;
+  --font-size-h5: 2vw;
+  --font-size-h6: 1.15vw;
+  @media (max-width: 1024px) {
+    --font-size-h1: 8vw;
+    --font-size-h2: 7vw;
+    --font-size-h3: 4.8vw;
+    --font-size-h4: 4vw;
+    --font-size-h5: 3.25vw;
+    --font-size-h6: 2.5vw;
+  }
+  @media (max-width: 767px) {
+    --font-size-h1: 12vw;
+    --font-size-h2: 9.5vw;
+    --font-size-h3: 8vw;
+    --font-size-h4: 6.5vw;
+    --font-size-h5: 5.5vw;
+    --font-size-h6: 5vw;
+  }
+
+  --border-main: 1px solid var(--color-border);
+}

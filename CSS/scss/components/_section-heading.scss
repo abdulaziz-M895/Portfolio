@@ -1,0 +1,29 @@
+@use "../global" as *;
+
+.setion-heading {
+  text-align: center;
+  font-weight: 700;
+  margin: 0 auto rem(30);
+  .setion-heading__sign {
+    font-size: var(--font-size-h5);
+    font-weight: inherit;
+    color: var(--color-secondary-text);
+  }
+  .setion-heading__title {
+    overflow-wrap: anywhere;
+    font-weight: inherit;
+    font-size: calc(var(--font-size-h2) - 1vw);
+    color: var(--color-white);
+  }
+  .setion-heading__paragraph {
+    font-size: 1.15vw;
+    font-weight: 500;
+    font-style: italic;
+    @include maxMedium {
+      font-size: 1.4vw;
+    }
+    @include maxMobile {
+      font-size: 1.7vw;
+    }
+  }
+}

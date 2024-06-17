@@ -1,8 +1,175 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+include ./includes/mixins
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     block titleName
       title Home | Abdulaziz
-  body 
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/coding.png" type="image/png">
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/style.css">
+  </head>
+  <body class="position-relative">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="https://www.linkedin.com/in/abdulaziz-omran/">
+          | // #[span Abdulaziz <br/> #[span.omran Omran]]
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon1"></span>
+          <span class="navbar-toggler-icon2"></span>
+          <span class="navbar-toggler-icon3"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            block links
+              <li class="nav-item">
+                <a class="nav-link bio-link py-4 active" aria-current="page" href="#bio">_Bio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link about-link py-4" href="#about">_About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link porfolio-link py-4" href="#portfolio">_Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link services-link py-4" href="#services">_Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link contact-link py-4" href="#contact">_Contact</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    img.side-lines(src="images/side-code-lines.png", alt="code lines")
+
+    block content 
+      main
+        section#bio.bio
+          .container
+            h6 // HI, I'M ABDULAZIZ, A...
+            h1 
+              <span class="curly">{"</span> 
+              <span class="front-end--h1">_front-end developer</span>
+              <span class="curly">"}</span>
+            a.hi__arrow(href="#about") ==&gt;
+
+        +backgroundImage("first")
+
+        section#about.home-about
+          .container.d-flex.flex-column.align-items-center
+            +sectionHeading("{/}", "<about_me>", "“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” – Martin Fowler")
+            .about__details
+              p.about__detail ...As a Front-End Developer dedicated to delivering exceptional web solutions, I possess a robust foundation in modern technologies and a strong drive for excellence. My technical expertise and commitment to quality ensure the creation of high-performing and visually appealing web applications.
+              p.about__detail ...I have successfully developed a variety of web applications, including ecommerce platforms, dynamic dashboards, and personal websites. My skill set includes proficiency in HTML, CSS, JavaScript, Bootstrap, SCSS, PugJS, and ReactJS, which enable me to build responsive and user-friendly interfaces. Additionally, I have experience with Python and fundamental data structures in Java, further broadening my development capabilities.
+            +mainButton("{read_more}", "#")
+
+        section#portfolio.home-portfolio
+          .container
+            +sectionHeading("(!)", "<portfolio>", "“Experience is the name everyone gives to their mistakes.” – Oscar Wilde")
+            .portfolio__content.row.top
+              .portfolio__col.col.d-flex.align-items-start.gap-3 
+                .portfolio__project.Elzero_dashboard
+                  img(src="images/Elzero-Dashboard_.png", alt="Elzero Dashboard", class="img-fluid")
+                  h5.title { Elzero Dashboard }
+                  p.description //..I made this dashboard website to practice my HTML and CSS skills.
+                  .links 
+                    a.code.main-button(target="_blanck", href="https://github.com/abdulaziz-M895/Elzero-Dashboard") ( Code )
+                    a.live-preview.main-button(target="_blanck", href="https://abdulaziz-m895.github.io/Elzero-Dashboard/") ( Live preview )
+                .portfolio__project.creative_agency
+                  img(src="images/Creative-Agency.png", alt="creative agency", class="img-fluid")
+                  h5.title { Creative Agency }
+                  p.description //..This is a modern and dynamic website template designed for creative agencies or portfolios. It features customizable settings, dynamic content, and smooth navigation.
+                  .links 
+                    a.code.main-button(target="_blanck", href="https://github.com/abdulaziz-M895/Creative-Agency") ( Code )
+                    a.live-preview.main-button(target="_blanck", href="https://abdulaziz-m895.github.io/Creative-Agency/") ( Live preview )
+              .portfolio__col.col.d-flex.align-items-start.justify-content-center
+                .portfolio__project.funiro
+                  img(src="images/Funiro.png", alt="Funiro ecommerce store", class="img-fluid")
+                  h5.title { Funiro }
+                  p.description //..This is an e-commerce website for a furniture store, providing users with a convenient platform to browse and purchase furniture items online.
+                  .links 
+                    a.code.main-button(target="_blanck", href="https://github.com/abdulaziz-M895/Funiro") ( Code )
+                    a.live-preview.main-button(target="_blanck", href="https://abdulaziz-m895.github.io/Funiro/") ( Live preview )
+            .portfolio__content.row 
+              .portfolio__col.col.d-flex.align-items-start.justify-content-center
+                .portfolio__project.facebook_clone
+                  img(src="images/Facebook-Clone.png", alt="Facebook clone", class="img-fluid")
+                  h5.title { Facebook Clone }
+                  p.description //..Facebook Clone to practice HTML, CSS and JavaScript skills.
+                  .links 
+                    a.code.main-button(target="_blanck", href="https://github.com/abdulaziz-M895/Facebook-Clone") ( Code )
+                    a.live-preview.main-button(target="_blanck", href="https://abdulaziz-m895.github.io/Facebook-Clone/") ( Live preview )
+              .portfolio__col.col.d-flex.align-items-start.gap-3
+                .portfolio__project.memory_game
+                  img(src="images/Memory-Game.png", alt="Memory Game", class="img-fluid")
+                  h5.title { Memory Matching Game }
+                  p.description //..This is a simple yet engaging game where players test their memory and matching skills by flipping cards to find pairs.
+                  .links 
+                    a.code.main-button(target="_blanck", href="https://github.com/abdulaziz-M895/Memory-Game") ( Code )
+                    a.live-preview.main-button(target="_blanck", href="https://abdulaziz-m895.github.io/Memory-Game/") ( Live preview )
+                .portfolio__project.guess_the_word
+                  img(src="images/Guess-the-Word-Game.png", alt="Guess the Word Game", class="img-fluid")
+                  h5.title { Guess the Word Game }
+                  p.description //..Guess the Word is a simple JavaScript-based game where players try to guess a randomly selected word within a limited number of attempts.
+                  .links 
+                    a.code.main-button(target="_blanck", href="https://github.com/abdulaziz-M895/Guess-the-Word-Game") ( Code )
+                    a.live-preview.main-button(target="_blanck", href="https://abdulaziz-m895.github.io/Guess-the-Word-Game/") ( Live preview )
+
+        section#services.home-services 
+          .container
+            +sectionHeading("{#}", "<services>", " “Simplicity is the soul of efficiency.” – Austin Freeman")
+            .service 
+              h2
+                <span class="curly">{"</span> 
+                <span class="front-end--h2">_front-end development</span>
+                <span class="curly">"}</span>
+
+        +backgroundImage("second")
+
+        section#contact.home-contact 
+          .container
+            +sectionHeading("{*}", "<contact_me>", " “ Code is like humor. When you have to explain it, it’s bad.” – Cory House")
+            form#form(action="https://formspree.io/f/meqyyvqj", method="POST")
+              input#name(type="text", name="name", placeholder="_name*")
+              p.error This field is required.
+              input#email(type="email", name="email", placeholder="_email*")
+              p.error This field is required.
+              textarea#message(name="message", placeholder="_message*")
+              p.error This field is required.
+              button.main-button(type="submit") { Send }
+
+    footer
+      .container.d-flex.align-items-center.gap-5
+        .links__sections 
+          a(class="nav-link bio-link active" href="#bio") _Bio
+          a(class="nav-link about-link", href="#about") _About
+          a(class="nav-link porfolio-link", href="#portfolio") _Portfolio
+          a(class="nav-link services-link", href="#services") _Services
+          a(class="nav-link contact-link", href="#contact") _Contact
+        .links__personal
+          a(href="https://github.com/abdulaziz-M895") 
+            <i class="fa-brands fa-github"></i>
+          a(href="https://www.linkedin.com/in/abdulaziz-omran/") 
+            <i class="fa-brands fa-linkedin"></i>
+          a(href="https://www.frontendmentor.io/profile/abdulaziz-M895") 
+            <svg id="mySvg" width="800px" height="800px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+              <path id="myPath" d="M12.17 1.272a.732.732 0 0 0-.718.732v13.914a.732.732 0 0 0 .732.732.732.732 0 0 0 .732-.732V2.004a.732.732 0 0 0-.745-.732zM23.246 5.44a.734.734 0 0 0-.277.063l-6.282 2.804a.733.733 0 0 0 0 1.336l6.282 2.813a.738.738 0 0 0 .3.065.732.732 0 0 0 .297-1.4L18.78 8.976l4.786-2.137a.734.734 0 0 0 .37-.966.734.734 0 0 0-.69-.433zm-22.5 5.032a.732.732 0 0 0-.722.915c1.736 6.677 7.775 11.341 14.683 11.341a.732.732 0 0 0 0-1.464A13.706 13.706 0 0 1 1.44 11.02a.732.732 0 0 0-.694-.547z"/>
+            </svg>
+        .made 
+          p.author Made with #[span <i class="fa-solid fa-heart"></i>] by #[a(href="https://www.linkedin.com/in/abdulaziz-omran/", target="_blanck") Abdulaziz]
+          p.design Desinged by #[a(href="https://wpastra.com/templates/websitedemos-net-web-developer-portfolio-04/", target="_blanck") ASTRA] 
+
+
+
+    <script src="JS/all.min.js" defer></script>
+    <script src="JS/bootstrap.bundle.min.js" defer></script>
+    <script src="JS/script.js" defer></script>
+  </body>
+</html>

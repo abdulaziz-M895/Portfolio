@@ -1,0 +1,31 @@
+@use "../global" as *;
+
+.background-image {
+  position: relative;
+  height: 350px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  &.first {
+    background-image: url(../images/code.jpg);
+  }
+  &.second {
+    background-image: url(../images/binary-code.jpg);
+  }
+  .overlay-1 {
+    @include overlay;
+    background-image: url("../images/square-grid.png");
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-color: var(--color-background-body);
+    opacity: 0.1;
+  }
+  .overlay-2 {
+    @include overlay;
+    background-color: var(--color-secondary-text);
+    opacity: 0.5;
+  }
+}

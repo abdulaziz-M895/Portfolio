@@ -1,1 +1,62 @@
 @use "../global" as *;
+
+.navbar {
+  background-color: transparent !important;
+  border-bottom: 1px solid var(--color-border);
+  .navbar-toggler {
+    border: none;
+    box-shadow: none;
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: rem(5);
+    width: rem(50);
+    .navbar-toggler-icon1,
+    .navbar-toggler-icon2,
+    .navbar-toggler-icon3 {
+      width: 100%;
+      height: rem(3);
+      background-color: var(--color-secondary-text);
+      border-radius: rem(10);
+    }
+  }
+  .navbar-brand {
+    display: flex;
+    align-items: flex-start;
+    color: var(--color-white);
+    font-family: $VT323;
+    font-size: rem(20);
+    letter-spacing: rem(1);
+    margin-inline-start: rem(5);
+    span:first-of-type {
+      margin-inline-start: rem(10);
+      line-height: 1.2;
+    }
+    .omran {
+      color: var(--color-secondary-text);
+    }
+  }
+  .navbar-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: rem(25);
+    @include maxMedium {
+      gap: 0;
+    }
+    a {
+      color: var(--color-main-text);
+      font-size: 1rem;
+      transition: var(--transition-time-5);
+      &:hover {
+        color: var(--color-secondary-text);
+      }
+      &.active {
+        color: var(--color-background-active);
+      }
+    }
+  }
+}

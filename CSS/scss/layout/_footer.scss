@@ -1,1 +1,57 @@
 @use "../global" as *;
+
+footer {
+  padding: rem(20);
+  border-top: var(--border-main);
+  .container {
+    @include maxMedium {
+      flex-direction: column;
+    }
+    > div {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .links__personal {
+    gap: rem(20);
+    a {
+      color: var(--color-secondary-text);
+      transition: var(--transition-time-3);
+      &:hover {
+        color: var(--color-background-active);
+      }
+      &:hover #myPath {
+        fill: var(--color-background-active);
+      }
+      svg {
+        width: 20px;
+        height: auto;
+        #myPath {
+          fill: var(--color-secondary-text);
+        }
+      }
+    }
+  }
+  .links__sections {
+    @extend .links__personal;
+    a {
+      color: var(--color-main-text);
+      &.active {
+        color: var(--color-background-active);
+      }
+    }
+  }
+  .made {
+    flex-direction: column;
+    a {
+      transition: var(--transition-time-3);
+      text-decoration: underline;
+      &:hover {
+        color: var(--color-background-active);
+      }
+    }
+  }
+}

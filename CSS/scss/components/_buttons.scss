@@ -1,0 +1,19 @@
+@use "../global" as *;
+
+.main-button {
+  background-color: var(--color-background-active);
+  transition: var(--transition-time-3);
+  padding: rem(20) rem(40);
+  display: inline-block;
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: rem(22);
+  @include maxMedium {
+    padding: rem(12) rem(24);
+    font-size: rem(13);
+  }
+  &:hover,
+  &:focus {
+    background-color: var(--color-secondary-text);
+  }
+}
