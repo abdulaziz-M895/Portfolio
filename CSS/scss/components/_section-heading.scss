@@ -12,18 +12,15 @@
   .setion-heading__title {
     overflow-wrap: anywhere;
     font-weight: inherit;
-    font-size: calc(var(--font-size-h2) - 1vw);
+    font-size: var(--font-size-h2);
     color: var(--color-white);
   }
   .setion-heading__paragraph {
-    font-size: 1.15vw;
+    font-size: 1.7vw;
     font-weight: 500;
     font-style: italic;
-    @include maxMedium {
-      font-size: 1.4vw;
-    }
     @include maxMobile {
-      font-size: 1.7vw;
+      font-size: 0.8rem;
     }
   }
 }

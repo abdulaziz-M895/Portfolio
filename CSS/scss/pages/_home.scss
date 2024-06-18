@@ -30,9 +30,9 @@
   .about__details {
     display: flex;
     border-top: var(--border-main);
-    font-size: 1.2vw;
-    @include minLarge {
-      font-size: 1vw;
+    @include maxMobile {
+      flex-direction: column;
+      border: none;
     }
     .about__detail {
       padding: rem(30);
@@ -41,10 +41,10 @@
       flex: 1;
       font-size: 1vw;
       @media (max-width: 1024px) {
-        font-size: 1.3vw;
+        font-size: 1.7vw;
       }
       @include maxMobile {
-        font-size: 1.7vw;
+        font-size: 0.9rem;
         padding: 1rem;
       }
       &:first-of-type {
@@ -54,6 +54,11 @@
         text-decoration: underline;
         font-size: 2vw;
         font-weight: 700;
+        @include maxMobile {
+          font-size: 1rem;
+          border: none;
+          border-block-end: var(--border-main);
+        }
         @include minLarge {
           font-size: 1.3vw;
         }
@@ -94,9 +99,9 @@
           font-weight: 700;
         }
         .description {
-          font-size: 1vw;
+          font-size: 1.5vw;
           @include maxMedium {
-            font-size: 2vw;
+            font-size: 1rem;
           }
         }
         .links {
@@ -110,7 +115,8 @@
               font-size: rem(14);
             }
             @include maxSmallMobile {
-              font-size: rem(10);
+              font-size: rem(12.5);
+              padding: rem(7) rem(10);
             }
           }
         }
@@ -118,15 +124,15 @@
       &:has(.portfolio__project:nth-child(2)) {
         .title {
           font-size: calc(var(--font-size-h5) - 0.35vw);
-        }
-        .main-button {
-          font-size: rem(11.5);
-          @include maxSmallMobile {
-            font-size: rem(10);
+          @include maxMedium {
+            font-size: var(--font-size-h5);
           }
         }
-        .description {
-          font-size: rem(14);
+        .main-button {
+          font-size: rem(12);
+          @include maxSmallMobile {
+            padding: rem(7) rem(10);
+          }
         }
       }
     }
@@ -163,7 +169,7 @@
       );
     }
     h2 {
-      font-size: calc(var(--font-size-h2) - 2vw);
+      font-size: var(--font-size-h3);
       color: var(--color-background-active);
       width: 100%;
       font-weight: 700;

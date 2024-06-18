@@ -7,15 +7,18 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  @include maxMobile {
+    height: 250px;
+  }
   &.first {
-    background-image: url(../images/code.jpg);
+    background-image: url(../images/code.webp);
   }
   &.second {
-    background-image: url(../images/binary-code.jpg);
+    background-image: url(../images/binary-code.webp);
   }
   .overlay-1 {
     @include overlay;
-    background-image: url("../images/square-grid.png");
+    background-image: url("../images/square-grid.webp");
     background-position: center center;
     background-repeat: repeat;
     background-size: contain;

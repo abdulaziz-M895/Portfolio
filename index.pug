@@ -1,6 +1,6 @@
 include ./includes/mixins
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +8,21 @@ include ./includes/mixins
       title Home | Abdulaziz
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/coding.png" type="image/png">
-    <link rel="stylesheet" href="CSS/all.min.css" />
-    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preload" href="images/code.webp" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap">
+    </noscript>
+    <link rel="icon" href="images/coding.webp" type="image/webp">
+    <link rel="preload" href="CSS/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="CSS/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="CSS/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="CSS/bootstrap.min.css">
+      <link rel="stylesheet" href="CSS/all.min.css">
+      <link rel="stylesheet" href="CSS/style.css">
+    </noscript>
+
   </head>
   <body class="position-relative">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -47,7 +58,7 @@ include ./includes/mixins
       </div>
     </nav>
 
-    img.side-lines(src="images/side-code-lines.png", alt="code lines")
+    img.side-lines(src="images/side-code-lines.webp", alt="code lines")
 
     block content 
       main
@@ -66,8 +77,8 @@ include ./includes/mixins
           .container.d-flex.flex-column.align-items-center
             +sectionHeading("{/}", "<about_me>", "“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” – Martin Fowler")
             .about__details
-              p.about__detail ...As a Front-End Developer dedicated to delivering exceptional web solutions, I possess a robust foundation in modern technologies and a strong drive for excellence. My technical expertise and commitment to quality ensure the creation of high-performing and visually appealing web applications.
-              p.about__detail ...I have successfully developed a variety of web applications, including ecommerce platforms, dynamic dashboards, and personal websites. My skill set includes proficiency in HTML, CSS, JavaScript, Bootstrap, SCSS, PugJS, and ReactJS, which enable me to build responsive and user-friendly interfaces. Additionally, I have experience with Python and fundamental data structures in Java, further broadening my development capabilities.
+              p.about__detail ...As a Front-End Developer dedicated to delivering exceptional web solutions, I possess a robust foundation in modern technologies and a strong drive for excellence.
+              p.about__detail ...My skill set includes proficiency in HTML, CSS, JavaScript, Bootstrap, SCSS, PugJS, and ReactJS, which enable me to build responsive and user-friendly interfaces. Additionally, I have experience with Python and fundamental data structures in Java, further broadening my development capabilities.
             +mainButton("{read_more}", "#")
 
         section#portfolio.home-portfolio
@@ -76,14 +87,14 @@ include ./includes/mixins
             .portfolio__content.row.top
               .portfolio__col.col.d-flex.align-items-start.gap-3 
                 .portfolio__project.Elzero_dashboard
-                  img(src="images/Elzero-Dashboard_.png", alt="Elzero Dashboard", class="img-fluid")
+                  img(src="images/Elzero-Dashboard_.webp", alt="Elzero Dashboard", class="img-fluid")
                   h5.title { Elzero Dashboard }
                   p.description //..I made this dashboard website to practice my HTML and CSS skills.
                   .links 
                     a.code.main-button(target="_blanck", href="https://github.com/abdulaziz-M895/Elzero-Dashboard") ( Code )
                     a.live-preview.main-button(target="_blanck", href="https://abdulaziz-m895.github.io/Elzero-Dashboard/") ( Live preview )
                 .portfolio__project.creative_agency
-                  img(src="images/Creative-Agency.png", alt="creative agency", class="img-fluid")
+                  img(src="images/Creative-Agency.webp", alt="creative agency", class="img-fluid")
                   h5.title { Creative Agency }
                   p.description //..This is a modern and dynamic website template designed for creative agencies or portfolios. It features customizable settings, dynamic content, and smooth navigation.
                   .links 
@@ -91,7 +102,7 @@ include ./includes/mixins
                     a.live-preview.main-button(target="_blanck", href="https://abdulaziz-m895.github.io/Creative-Agency/") ( Live preview )
               .portfolio__col.col.d-flex.align-items-start.justify-content-center
                 .portfolio__project.funiro
-                  img(src="images/Funiro.png", alt="Funiro ecommerce store", class="img-fluid")
+                  img(src="images/Funiro.webp", alt="Funiro ecommerce store", class="img-fluid")
                   h5.title { Funiro }
                   p.description //..This is an e-commerce website for a furniture store, providing users with a convenient platform to browse and purchase furniture items online.
                   .links 
@@ -100,7 +111,7 @@ include ./includes/mixins
             .portfolio__content.row 
               .portfolio__col.col.d-flex.align-items-start.justify-content-center
                 .portfolio__project.facebook_clone
-                  img(src="images/Facebook-Clone.png", alt="Facebook clone", class="img-fluid")
+                  img(src="images/Facebook-Clone.webp", alt="Facebook clone", class="img-fluid")
                   h5.title { Facebook Clone }
                   p.description //..Facebook Clone to practice HTML, CSS and JavaScript skills.
                   .links 
@@ -108,14 +119,14 @@ include ./includes/mixins
                     a.live-preview.main-button(target="_blanck", href="https://abdulaziz-m895.github.io/Facebook-Clone/") ( Live preview )
               .portfolio__col.col.d-flex.align-items-start.gap-3
                 .portfolio__project.memory_game
-                  img(src="images/Memory-Game.png", alt="Memory Game", class="img-fluid")
+                  img(src="images/Memory-Game.webp", alt="Memory Game", class="img-fluid")
                   h5.title { Memory Matching Game }
                   p.description //..This is a simple yet engaging game where players test their memory and matching skills by flipping cards to find pairs.
                   .links 
                     a.code.main-button(target="_blanck", href="https://github.com/abdulaziz-M895/Memory-Game") ( Code )
                     a.live-preview.main-button(target="_blanck", href="https://abdulaziz-m895.github.io/Memory-Game/") ( Live preview )
                 .portfolio__project.guess_the_word
-                  img(src="images/Guess-the-Word-Game.png", alt="Guess the Word Game", class="img-fluid")
+                  img(src="images/Guess-the-Word-Game.webp", alt="Guess the Word Game", class="img-fluid")
                   h5.title { Guess the Word Game }
                   p.description //..Guess the Word is a simple JavaScript-based game where players try to guess a randomly selected word within a limited number of attempts.
                   .links 
